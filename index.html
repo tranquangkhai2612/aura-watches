@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/img/favicon.ico"
-    />
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/templatemo.css" />
@@ -140,28 +135,23 @@
           <div class="navbar align-self-center d-flex">
             <div
               class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3"
-            >
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputMobileSearch"
-                  placeholder="Search ..."
-                />
-                <div class="input-group-text">
-                  <i class="fa fa-fw fa-search"></i>
-                </div>
-              </div>
-            </div>
+            ></div>
+            <form class="d-flex" action="#!shop">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                ng-model="searchBar"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
             <a
-              class="nav-icon d-none d-lg-inline"
+              class="nav-icon position-relative text-decoration-none index-card"
               href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#templatemo_search"
             >
-              <i class="fa fa-fw fa-search text-dark mr-2"></i>
-            </a>
-            <a class="nav-icon position-relative text-decoration-none" href="#">
               <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
               <span
                 class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
@@ -180,48 +170,6 @@
       </div>
     </nav>
     <!-- HEADER -->
-
-    <!-- MODAL -->
-    <div
-      class="modal fade bg-white"
-      id="templatemo_search"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="w-100 pt-1 mb-5 text-right">
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <form
-          action=""
-          method="get"
-          class="modal-content modal-body border-0 p-0"
-        >
-          <div class="input-group mb-2">
-            <input
-              type="text"
-              class="form-control"
-              id="inputModalSearch"
-              name="q"
-              placeholder="Search ..."
-            />
-            <button
-              type="submit"
-              class="input-group-text bg-success text-light"
-            >
-              <i class="fa fa-fw fa-search text-white"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
 
     <!-- VIEWs -->
     <div ng-view></div>
@@ -422,9 +370,16 @@
 
       app.run(function ($rootScope, $http) {
         $rootScope.list = [];
-        $http.get("data.json").then(function (res) {
-          $rootScope.list = res.data.dataSubjects;
+        $rootScope.watchColors = [];
+        $http.get("./assets/data.json").then(function (res) {
+          $rootScope.list = res.data.DataList;
         });
+
+        console.log($rootScope.list);
+        $http.get("./assets/json/watchColorData.json").then(function (res) {
+          $rootScope.watchColors = res.data.watchColorData;
+        });
+        console.log($rootScope.watchColors);
       });
 
       app.controller("addController", function ($scope) {

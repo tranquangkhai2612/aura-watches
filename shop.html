@@ -4,82 +4,521 @@
     <div class="col-lg-3">
       <h1 class="h2 pb-4">Categories</h1>
       <ul class="list-unstyled templatemo-accordion">
+        <!-- cat gender -->
         <li class="pb-3">
-          <a
-            class="collapsed d-flex justify-content-between h3 text-decoration-none"
-            href="#collapseExample"
-          >
-            Gender
-            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
-          </a>
-          <ul class="collapse show list-unstyled pl-3" id="collapseExample">
-            <li><a class="text-decoration-none" href="#">Men</a></li>
-            <li><a class="text-decoration-none" href="#">Ladies</a></li>
-            <li><a class="text-decoration-none" href="#">None</a></li>
-          </ul>
+          <p>
+            <a
+              class="btn btn-success text-white w-50"
+              data-bs-toggle="collapse"
+              href="#gender"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Gender
+            </a>
+          </p>
+          <div class="collapse" id="gender">
+            <div class="card card-body">
+              <div
+                class="btn-group-vertical-sm"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
+                <input
+                  ng-model="genderFilter"
+                  value="Men"
+                  type="radio"
+                  class="btn-check"
+                  id="btncheck1"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btncheck1"
+                  >Men</label
+                >
+
+                <input
+                  ng-model="genderFilter"
+                  value="Ladies"
+                  type="radio"
+                  class="btn-check"
+                  id="btncheck2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btncheck2"
+                  >Ladies</label
+                >
+                <input
+                  ng-model="genderFilter"
+                  value="Unisex"
+                  type="radio"
+                  class="btn-check"
+                  id="btncheck3"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btncheck3"
+                  >Unisex</label
+                >
+              </div>
+            </div>
+          </div>
         </li>
+
+        <!-- cat color -->
         <li class="pb-3">
-          <a
-            class="collapsed d-flex justify-content-between h3 text-decoration-none"
-            href="#"
-          >
-            Color
-            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-          </a>
-          <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-            <li><a class="text-decoration-none" href="#">Black</a></li>
-            <li><a class="text-decoration-none" href="#">White</a></li>
-            <li><a class="text-decoration-none" href="#">Brown</a></li>
-            <li><a class="text-decoration-none" href="#">Purple</a></li>
-            <li><a class="text-decoration-none" href="#">Red</a></li>
-            <li><a class="text-decoration-none" href="#">Grey</a></li>
-            <li><a class="text-decoration-none" href="#">Yellow</a></li>
-            <li><a class="text-decoration-none" href="#">Pink</a></li>
-            <li><a class="text-decoration-none" href="#">Mint Green</a></li>
-            <li>
-              <a class="text-decoration-none" href="#">Yellow Gold-plated</a>
-            </li>
-            <li><a class="text-decoration-none" href="#">Rose Gold</a></li>
-            <li>
-              <a class="text-decoration-none" href="#">Brown and green</a>
-            </li>
-            <li><a class="text-decoration-none" href="#">Sand Beige</a></li>
-            <li><a class="text-decoration-none" href="#">Silver</a></li>
-            <li><a class="text-decoration-none" href="#">Green</a></li>
-            <li><a class="text-decoration-none" href="#">Blue</a></li>
-          </ul>
+          <p>
+            <a
+              class="btn btn-success text-white w-50"
+              data-bs-toggle="collapse"
+              href="#cat-color"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Color
+            </a>
+          </p>
+          <div class="collapse" id="cat-color">
+            <div class="card card-body">
+              <div
+                class="btn-group-sm"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
+                <input
+                  ng-model="colorFilter"
+                  value="Black"
+                  type="radio"
+                  class="btn-check"
+                  id="color1"
+                />
+                <label class="btn btn-outline-primary" for="color1"
+                  >Black</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="White"
+                  type="radio"
+                  class="btn-check"
+                  id="color2"
+                />
+                <label class="btn btn-outline-primary" for="color2"
+                  >White</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Brown"
+                  type="radio"
+                  class="btn-check"
+                  id="color3"
+                />
+                <label class="btn btn-outline-primary" for="color3"
+                  >Brown</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Purple"
+                  type="radio"
+                  class="btn-check"
+                  id="color4"
+                />
+                <label class="btn btn-outline-primary" for="color4"
+                  >Purple</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Red"
+                  type="radio"
+                  class="btn-check"
+                  id="color5"
+                />
+                <label class="btn btn-outline-primary" for="color5">Red</label>
+                <input
+                  ng-model="colorFilter"
+                  value="Grey"
+                  type="radio"
+                  class="btn-check"
+                  id="color6"
+                />
+                <label class="btn btn-outline-primary" for="color6">Grey</label>
+                <input
+                  ng-model="colorFilter"
+                  value="Yellow"
+                  type="radio"
+                  class="btn-check"
+                  id="color7"
+                />
+                <label class="btn btn-outline-primary" for="color7"
+                  >Yellow</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Pink"
+                  type="radio"
+                  class="btn-check"
+                  id="color8"
+                />
+                <label class="btn btn-outline-primary" for="color8">Pink</label>
+                <input
+                  ng-model="colorFilter"
+                  value="Mint Green"
+                  type="radio"
+                  class="btn-check"
+                  id="color9"
+                />
+                <label class="btn btn-outline-primary" for="color9"
+                  >Mint Green</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Yellow Gold-plated"
+                  type="radio"
+                  class="btn-check"
+                  id="color10"
+                />
+                <label class="btn btn-outline-primary" for="color10"
+                  >Yellow Gold-plated</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Brown and green"
+                  type="radio"
+                  class="btn-check"
+                  id="color11"
+                />
+                <label class="btn btn-outline-primary" for="color11"
+                  >Brown and green</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Sand Beige"
+                  type="radio"
+                  class="btn-check"
+                  id="color12"
+                />
+                <label class="btn btn-outline-primary" for="color12"
+                  >Sand Beige</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Silver"
+                  type="radio"
+                  class="btn-check"
+                  id="color13"
+                />
+                <label class="btn btn-outline-primary" for="color13"
+                  >Silver</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Green"
+                  type="radio"
+                  class="btn-check"
+                  id="color14"
+                />
+                <label class="btn btn-outline-primary" for="color14"
+                  >Green</label
+                >
+                <input
+                  ng-model="colorFilter"
+                  value="Blue"
+                  type="radio"
+                  class="btn-check"
+                  id="color15"
+                />
+                <label class="btn btn-outline-primary" for="color15"
+                  >Blue</label
+                >
+              </div>
+            </div>
+          </div>
         </li>
+
+        <!-- cat tech type -->
         <li class="pb-3">
-          <a
-            class="collapsed d-flex justify-content-between h3 text-decoration-none"
-            href="#"
-          >
-            Product
-            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-          </a>
-          <ul id="collapseThree" class="collapse list-unstyled pl-3">
-            <li><a class="text-decoration-none" href="#">Bag</a></li>
-            <li><a class="text-decoration-none" href="#">Sweather</a></li>
-            <li><a class="text-decoration-none" href="#">Sunglass</a></li>
-          </ul>
+          <p>
+            <a
+              class="btn btn-success text-white w-50"
+              data-bs-toggle="collapse"
+              href="#cat-techtype"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Tech Type
+            </a>
+          </p>
+          <div class="collapse" id="cat-techtype">
+            <div class="card card-body">
+              <div
+                class="btn-group-vertical-sm"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
+                <input
+                  ng-model="techTypeFilter"
+                  value="Digital"
+                  type="radio"
+                  class="btn-check"
+                  id="techtype1"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="techtype1"
+                  >Digital</label
+                >
+
+                <input
+                  ng-model="techTypeFilter"
+                  value="Analog"
+                  type="radio"
+                  class="btn-check"
+                  id="techtype2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="techtype2"
+                  >Analog</label
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- cat watch/clock -->
+        <li class="pb-3">
+          <p>
+            <a
+              class="btn btn-success text-white w-50"
+              data-bs-toggle="collapse"
+              href="#cat-type"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Type
+            </a>
+          </p>
+          <div class="collapse" id="cat-type">
+            <div class="card card-body">
+              <div
+                class="btn-group-vertical-sm"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
+                <input
+                  ng-model="typeFilter"
+                  value="Watch"
+                  type="radio"
+                  class="btn-check"
+                  id="type1"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="type1">Watch</label>
+
+                <input
+                  ng-model="typeFilter"
+                  value="Clock"
+                  type="radio"
+                  class="btn-check"
+                  id="type2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="type2">Clock</label>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- cat materials -->
+        <li class="pb-3">
+          <p>
+            <a
+              class="btn btn-success text-white w-50"
+              data-bs-toggle="collapse"
+              href="#cat-material"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Material
+            </a>
+          </p>
+          <div class="collapse" id="cat-material">
+            <div class="card card-body">
+              <div
+                class="btn-group-vertical-sm"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Resin"
+                  type="radio"
+                  class="btn-check"
+                  id="mate1"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate1">Resin</label>
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Stainless Steel"
+                  type="radio"
+                  class="btn-check"
+                  id="mate2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate2"
+                  >Stainless Steel</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Super Titanium"
+                  type="radio"
+                  class="btn-check"
+                  id="mate3"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate3"
+                  >Super Titanium</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Leather"
+                  type="radio"
+                  class="btn-check"
+                  id="mate4"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate4"
+                  >Leather</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Silicone"
+                  type="radio"
+                  class="btn-check"
+                  id="mate5"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate5"
+                  >Silicone</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Metal"
+                  type="radio"
+                  class="btn-check"
+                  id="mate6"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate6">Metal</label>
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Ceramic"
+                  type="radio"
+                  class="btn-check"
+                  id="mate7"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate7"
+                  >Ceramic</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="316L Stainless Steel"
+                  type="radio"
+                  class="btn-check"
+                  id="mate8"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate8"
+                  >316L Stainless Steel</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Nylon"
+                  type="radio"
+                  class="btn-check"
+                  id="mate9"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate9">Nylon</label>
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Wooden"
+                  type="radio"
+                  class="btn-check"
+                  id="mate10"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate10"
+                  >Wooden</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Plastic"
+                  type="radio"
+                  class="btn-check"
+                  id="mate11"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate11"
+                  >Plastic</label
+                >
+                <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value="Marble"
+                  type="radio"
+                  class="btn-check"
+                  id="mate12"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate12"
+                  >Marble</label
+                >
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
 
+    <!-- PRODUCT LISTS -->
     <div class="col-lg-9">
       <div class="row">
         <div class="col-md-6">
           <ul class="list-inline shop-top-menu pb-3 pt-1">
             <li class="list-inline-item">
-              <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
+              <a
+                class="h3 text-dark text-decoration-none mr-3 btn btn-grey"
+                role="button"
+                >All</a
+              >
             </li>
             <li class="list-inline-item">
-              <a class="h3 text-dark text-decoration-none mr-3" href="#"
+              <a
+                class="h3 text-dark text-decoration-none mr-3 btn btn-grey"
+                role="button"
                 >Men's</a
               >
             </li>
             <li class="list-inline-item">
-              <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
+              <a
+                class="h3 text-dark text-decoration-none btn btn-grey"
+                role="button"
+                >Women's</a
+              >
             </li>
           </ul>
         </div>
@@ -94,12 +533,16 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <!-- CARDS -->
+        <div
+          class="col-lg-4 col-md-6 col-sm-12"
+          ng-repeat="item in list | filter:searchBar | filter:{gender:genderFilter} | filter:{watchColor:colorFilter} | filter:{techType:techTypeFilter} | filter:{type:typeFilter} | filter:{material:materialFilter}"
+        >
           <div class="card mb-4 product-wap rounded-0">
             <div class="card rounded-0">
               <img
                 class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_01.jpg"
+                ng-src="{{item.imageUrl}}"
               />
               <div
                 class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
@@ -131,12 +574,14 @@
             </div>
             <div class="card-body">
               <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
+                >{{item.watchName}}</a
               >
               <ul
                 class="w-100 list-unstyled d-flex justify-content-between mb-0"
               >
-                <li>M/L/X/XL</li>
+                <li>
+                  {{item.gender}} - {{item.watchColor}} - {{item.material}}
+                </li>
                 <li class="pt-2">
                   <span
                     class="product-color-dot color-dot-red float-left rounded-circle ml-1"
@@ -164,603 +609,13 @@
                   <i class="text-muted fa fa-star"></i>
                 </li>
               </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_02.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_03.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_04.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_05.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_06.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_07.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_08.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 product-wap rounded-0">
-            <div class="card rounded-0">
-              <img
-                class="card-img rounded-0 img-fluid"
-                src="assets/img/shop_09.jpg"
-              />
-              <div
-                class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
-                      ><i class="far fa-heart"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="far fa-eye"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
-                      ><i class="fas fa-cart-plus"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
-                >Oupidatat non</a
-              >
-              <ul
-                class="w-100 list-unstyled d-flex justify-content-between mb-0"
-              >
-                <li>M/L/X/XL</li>
-                <li class="pt-2">
-                  <span
-                    class="product-color-dot color-dot-red float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-blue float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-black float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-light float-left rounded-circle ml-1"
-                  ></span>
-                  <span
-                    class="product-color-dot color-dot-green float-left rounded-circle ml-1"
-                  ></span>
-                </li>
-              </ul>
-              <ul class="list-unstyled d-flex justify-content-center mb-1">
-                <li>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-warning fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                  <i class="text-muted fa fa-star"></i>
-                </li>
-              </ul>
-              <p class="text-center mb-0">$250.00</p>
+              <p class="text-center mb-0">${{item.price}}</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- PAGE NUMBER -->
       <div div="row">
         <ul class="pagination pagination-lg justify-content-end">
           <li class="page-item disabled">
@@ -967,11 +822,3 @@
   </div>
 </section>
 <!--End Brands-->
-
-<!-- Start Script -->
-<script src="assets/js/jquery-1.11.0.min.js"></script>
-<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/templatemo.js"></script>
-<script src="assets/js/custom.js"></script>
-<!-- End Script -->

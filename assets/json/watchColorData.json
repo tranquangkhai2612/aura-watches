@@ -1,0 +1,19 @@
+{
+    "watchColorData":[
+    {"colorId":1,"watchColor":"Black"},
+    {"colorId":2,"watchColor":"White"},
+    {"colorId":3,"watchColor":"Brown"},
+    {"colorId":4,"watchColor":"Purple"},
+    {"colorId":5,"watchColor":"Red"},
+    {"colorId":6,"watchColor":"Grey"},
+    {"colorId":7,"watchColor":"Yellow"},
+    {"colorId":8,"watchColor":"Pink"},
+    {"colorId":9,"watchColor":"Mint Green"},
+    {"colorId":10,"watchColor":"Yellow Gold-plated"},
+    {"colorId":11,"watchColor":"Brown and green"},
+    {"colorId":12,"watchColor":"Sand Beige"},
+    {"colorId":13,"watchColor":"Silver"},
+    {"colorId":14,"watchColor":"Green"},
+    {"colorId":15,"watchColor":"Blue"}
+    ]
+}
