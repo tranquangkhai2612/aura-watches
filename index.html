@@ -29,6 +29,10 @@
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin=""
     />
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
   </head>
 
   <body ng-app="myApp" ng-controller="myController">
@@ -346,10 +350,17 @@
           })
           .when("/contact", {
             templateUrl: "contact.html",
+          })
+          .when("/watch/:id", {
+            templateUrl: "watchDetail.html",
+            // controller: "detailController",
           });
+        // .otherwise({
+        //   redirectTo: "/",
+        // });
       });
 
-      app.controller("myController", function ($scope) {
+      app.controller("myController", function ($scope, $location) {
         $scope.removeSub = function (id) {
           if (confirm("Are you sure?")) {
             let index = -1;
@@ -365,6 +376,10 @@
             }
           }
           console.log("hello");
+        };
+
+        $scope.goToDetail = function (watchId) {
+          $location.path("/watch/" + watchId);
         };
       });
 
@@ -395,6 +410,22 @@
           console.log(newSub);
           alert("Success add new course !!!");
         };
+      });
+
+      app.controller("detailController", function ($scope, $routeParams) {
+        var watchId = $routeParams.id;
+        // Fetch the watch item with the specified ID and assign it to $scope.watch
+        $scope.watch = $scope.list.find(function (item) {
+          return item.id === parseInt(watchId);
+        });
+      });
+
+      app.controller("loginController", function ($scope) {
+        // Login controller logic
+      });
+
+      app.controller("signUpController", function ($scope) {
+        // Signup controller logic
       });
     </script>
   </body>

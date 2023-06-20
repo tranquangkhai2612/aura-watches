@@ -27,6 +27,7 @@
               >
                 <input
                   ng-model="genderFilter"
+                  ng-init="genderFilter=''"
                   value="Men"
                   type="radio"
                   class="btn-check"
@@ -87,6 +88,7 @@
               >
                 <input
                   ng-model="colorFilter"
+                  ng-init="colorFilter=''"
                   value="Black"
                   type="radio"
                   class="btn-check"
@@ -503,6 +505,7 @@
               <a
                 class="h3 text-dark text-decoration-none mr-3 btn btn-grey"
                 role="button"
+                ng-click="clearFilter()"
                 >All</a
               >
             </li>
@@ -549,23 +552,21 @@
               >
                 <ul class="list-unstyled">
                   <li>
-                    <a
-                      class="btn btn-success text-white"
-                      href="shop-single.html"
+                    <a class="btn btn-success text-white"
                       ><i class="far fa-heart"></i
                     ></a>
                   </li>
                   <li>
                     <a
                       class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
+                      ng-click="goToDetail(item.id)"
                       ><i class="far fa-eye"></i
                     ></a>
                   </li>
                   <li>
                     <a
                       class="btn btn-success text-white mt-2"
-                      href="shop-single.html"
+                      href="#/watch/{{item.id}}"
                       ><i class="fas fa-cart-plus"></i
                     ></a>
                   </li>
@@ -573,7 +574,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="shop-single.html" class="h3 text-decoration-none"
+              <a href="#!/watch/{{item.id}}" class="h3 text-decoration-none"
                 >{{item.watchName}}</a
               >
               <ul
