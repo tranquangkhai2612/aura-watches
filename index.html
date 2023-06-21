@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/templatemo.css" />
     <link rel="stylesheet" href="assets/css/custom.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css"
+    />
     <!-- Load fonts style after rendering the layout styles -->
     <link
       rel="stylesheet"
@@ -87,7 +90,10 @@
     <!-- TOP NAV -->
 
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <nav
+      class="navbar navbar-expand-lg navbar-light shadow"
+      ng-controller="headerController"
+    >
       <div class="container d-flex justify-content-between align-items-center">
         <a
           class="navbar-brand text-success logo h1 align-self-center"
@@ -162,13 +168,19 @@
                 >7</span
               >
             </a>
-            <a class="nav-icon position-relative text-decoration-none" href="#">
+            <a
+              class="nav-icon position-relative text-decoration-none"
+              href="#!login"
+            >
               <i class="fa fa-fw fa-user text-dark mr-3"></i>
-              <span
-                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
-                >+99</span
-              >
             </a>
+            <span>{{username}}</span>
+            <a
+              type="button"
+              class="btn btn-danger m-2 text-white"
+              ng-click="logout()"
+              >Quit</a
+            >
           </div>
         </div>
       </div>
@@ -207,6 +219,12 @@
           .when("/watch/:id", {
             templateUrl: "watchDetail.html",
             // controller: "detailController",
+          })
+          .when("/login", {
+            templateUrl: "login.html",
+          })
+          .when("/signup", {
+            templateUrl: "signup.html",
           });
         // .otherwise({
         //   redirectTo: "/",
@@ -273,12 +291,79 @@
         });
       });
 
-      app.controller("loginController", function ($scope) {
-        // Login controller logic
+      app.controller(
+        "loginController",
+        function ($scope, $window, $location, $route) {
+          $scope.login = function () {
+            // Retrieve existing users from local storage
+            var users = JSON.parse($window.localStorage.getItem("users")) || [];
+
+            // Find the user with the entered username
+            var user = users.find(function (user) {
+              return user.username === $scope.username;
+            });
+
+            if (user && user.password === $scope.password) {
+              // Successful login
+              alert("Login successful!");
+              // Perform any additional actions, such as redirecting to a dashboard page
+              $window.localStorage.setItem("username", $scope.username);
+              $location.path("/");
+              $route.reload();
+            } else {
+              // Invalid credentials
+              alert("Invalid username or password. Please try again.");
+            }
+          };
+        }
+      );
+
+      app.controller("signUpController", function ($scope, $window, $location) {
+        $scope.signup = function () {
+          // Retrieve existing users from local storage
+          var users = JSON.parse($window.localStorage.getItem("users")) || [];
+
+          // Check if the entered username already exists
+          var existingUser = users.find(function (user) {
+            return user.username === $scope.username;
+          });
+
+          if (existingUser) {
+            alert(
+              "Username already exists. Please choose a different username."
+            );
+            return;
+          }
+
+          // Create a new user object
+          var newUser = {
+            username: $scope.username,
+            password: $scope.password,
+          };
+
+          // Add the new user to the users array
+          users.push(newUser);
+
+          // Save the updated users array to local storage
+          $window.localStorage.setItem("users", JSON.stringify(users));
+
+          // Perform any additional actions, such as redirecting to a login page
+          alert("Sign up successful. You can now log in.");
+          $location.path("/login");
+        };
       });
 
-      app.controller("signUpController", function ($scope) {
-        // Signup controller logic
+      app.controller("headerController", function ($scope, $window) {
+        // Retrieve the username from local storage
+        $scope.username = $window.localStorage.getItem("username");
+        $scope.logout = function () {
+          // Remove the username from local storage
+          $window.localStorage.removeItem("username");
+          $scope.username = "";
+
+          // Redirect to home page or any other page
+          $location.path("/");
+        };
       });
     </script>
   </body>

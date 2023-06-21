@@ -1096,19 +1096,19 @@
   },{
     "id": 85,
     "brand": "Seiko",
-    "imageUrl": "https://cdn2.jomashop.com/media/catalog/product/s/e/seiko-prospex-automatic-blue-dial-men-s-watch-srpd51.jpg",
+    "imageUrl": "https://wscdn.vn/upload/original-image/SRPD51K2.jpg?size=800x800&fomat=webp",
     "watchName": "Seiko Prospex Automatic Blue Dial",
     "gender": "Men",
     "watchColor": "Blue",
     "description": "Stainless steel case with a stainless steel bracelet. Uni-directional rotating blue stainless steel bezel. Blue dial with silver-tone hands and dot hour markers. Minute markers around the outer rim. Dial Type: Analog. Luminescent hands and markers. Date display at the 3 o'clock position. Seiko Calibre 4R36 automatic movement with a 41-hour power reserve. Scratch resistant Hardlex crystal. Screw down crown. Transparent case back. Round case shape, case size: 44 mm, case thickness: 12 mm. Band width: 22 mm. Deployment clasp. Water resistant at 100 meters / 330 feet. Functions: date, hour, minute, second. Casual watch style. Seiko Prospex Automatic Blue Dial Men's Watch SRPD51.",
     "price": 349,
-    "techType": "Automatic",
+    "techType": "Analog",
     "type": "Watch",
     "material": "Stainless Steel"
   },{
     "id": 86,
     "brand": "Citizen",
-    "imageUrl": "https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-eco-drive-promaster-diver-blue-dial-men-s-watch-bn0191-55l.jpg",
+    "imageUrl": "https://wscdn.vn/upload/original-image/BN0151-09L.jpg?size=800x800&fomat=webp",
     "watchName": "Citizen Eco-Drive Promaster Diver Blue Dial",
     "gender": "Men",
     "watchColor": "Blue",
@@ -1120,13 +1120,13 @@
   },{
     "id": 87,
     "brand": "Fossil",
-    "imageUrl": "https://cdn2.jomashop.com/media/catalog/product/f/o/fossil-machine-automatic-skeleton-dial-men-s-watch-me3104.jpg",
+    "imageUrl": "https://cdn3.dhht.vn/wp-content/uploads/2017/09/ME3099-1-699x699.jpg",
     "watchName": "Fossil Machine Automatic Skeleton Dial",
     "gender": "Men",
     "watchColor": "Silver",
     "description": "Stainless steel case with a stainless steel bracelet. Fixed stainless steel bezel. Skeleton dial with silver-tone hands and index hour markers. Minute markers around the outer rim. Dial Type: Analog. Luminescent hands and markers. Automatic movement with a 42-hour power reserve. Scratch resistant mineral crystal. Pull / push crown. Transparent case back. Round case shape, case size: 45 mm, case thickness: 14 mm. Band width: 24 mm. Deployment clasp. Water resistant at 50 meters / 165 feet. Functions: hour, minute, second. Casual watch style. Fossil Machine Automatic Skeleton Dial Men's Watch ME3104.",
     "price": 245,
-    "techType": "Automatic",
+    "techType": "Analog",
     "type": "Watch",
     "material": "Stainless Steel"
   }
