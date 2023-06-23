@@ -1,5 +1,5 @@
 <!-- Start Content -->
-<div class="container py-5" ng-controller="searchController">
+<div class="container py-5">
   <div class="row">
     <div class="col-lg-3">
       <h1 class="h2 pb-4">Categories</h1>
@@ -25,6 +25,18 @@
                 role="group"
                 aria-label="Basic checkbox toggle button group"
               >
+                <input
+                  ng-model="genderFilter"
+                  ng-init="genderFilter=''"
+                  value=""
+                  type="radio"
+                  class="btn-check"
+                  id="btncheck0"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btncheck0"
+                  >All</label
+                >
                 <input
                   ng-model="genderFilter"
                   ng-init="genderFilter=''"
@@ -86,6 +98,17 @@
                 role="group"
                 aria-label="Basic checkbox toggle button group"
               >
+              <input
+                  ng-model="colorFilter"
+                  ng-init="colorFilter=''"
+                  value=""
+                  type="radio"
+                  class="btn-check"
+                  id="color0"
+                />
+                <label class="btn btn-outline-primary" for="color0"
+                  >All</label
+                >
                 <input
                   ng-model="colorFilter"
                   ng-init="colorFilter=''"
@@ -259,6 +282,17 @@
               >
                 <input
                   ng-model="techTypeFilter"
+                  value=""
+                  type="radio"
+                  class="btn-check"
+                  id="techtype0"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="techtype0"
+                  >All</label
+                >
+                <input
+                  ng-model="techTypeFilter"
                   value="Digital"
                   type="radio"
                   class="btn-check"
@@ -308,6 +342,15 @@
               >
                 <input
                   ng-model="typeFilter"
+                  value=""
+                  type="radio"
+                  class="btn-check"
+                  id="type0"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="type0">All</label>
+                <input
+                  ng-model="typeFilter"
                   value="Watch"
                   type="radio"
                   class="btn-check"
@@ -352,6 +395,15 @@
                 aria-label="Basic checkbox toggle button group"
               >
                 <!-- material -->
+                <input
+                  ng-model="materialFilter"
+                  value=""
+                  type="radio"
+                  class="btn-check"
+                  id="mate0"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="mate0">All</label>
                 <input
                   ng-model="materialFilter"
                   value="Resin"
